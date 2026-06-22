@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Путь музыканта | Васильев Николай Львович</title>
+  <meta name="description" content="Официальный сайт-визитка шансонье и композитора Васильева Николая Львовича. Биография, творчество, дискография.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Ambient Orbs -->
+  <div class="ambient-orbs" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="logo" href="#hero">
+        <span class="logo__line"></span>
+        <span class="logo__text">Vasil<span class="logo__accent">iev</span></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Меню">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#bio" class="nav__link"><span>01</span>Биография</a>
+        <a href="#music" class="nav__link"><span>02</span>Творчество</a>
+        <a href="#festivals" class="nav__link"><span>03</span>Фестивали</a>
+        <a href="#collab" class="nav__link"><span>04</span>Сотрудничество</a>
+        <a href="#gallery" class="nav__link"><span>05</span>Галерея</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__parallax" id="hero-parallax" style="background-image: url('hero_bg.png')"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__noise"></div>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__badge reveal-up">
+          <span class="hero__badge-dot"></span>
+          Шансонье · Композитор · Автор
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__title-line split-text" data-text="Путь">Путь</span>
+          <span class="hero__title-line hero__title-line--accent split-text" data-text="музыканта">музыканта</span>
+        </h1>
+
+        <div class="hero__meta reveal-up" style="--d:.6s">
+          <p class="hero__name">Васильев <strong>Николай Львович</strong></p>
+          <p class="hero__dates">1954 — настоящее время</p>
+        </div>
+
+        <div class="hero__cta reveal-up" style="--d:.9s">
+          <a href="#music" class="btn btn--glow magnetic" id="btn-listen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Слушать треки
+          </a>
+          <a href="#bio" class="btn btn--ghost magnetic">
+            Биография
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint">
+        <div class="hero__scroll-line"></div>
+        <span>scroll</span>
+      </div>
+
+      <!-- floating stats -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <strong>70+</strong>
+          <span>лет</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <strong>40+</strong>
+          <span>лет на сцене</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <strong>∞</strong>
+          <span>песен о Сибири</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ MANIFESTO ══════════ -->
+    <section class="manifesto">
+      <div class="container manifesto__inner">
+        <div class="manifesto__number reveal-left">01</div>
+        <div class="manifesto__body reveal-right">
+          <h2 class="manifesto__title">Творческий путь</h2>
+          <p class="manifesto__quote">
+            «Николай Львович активно участвовал в музыкальных фестивалях и конкурсах, включая фестивали шансона и межрегиональные песенные конкурсы. Его композиции вошли в репертуар известных исполнителей.»
+          </p>
+          <a href="#bio" class="btn btn--line magnetic">
+            Узнать больше
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="manifesto__image reveal-up" style="--d:.4s">
+          <img src="musician.png" alt="Васильев Николай Львович" loading="lazy">
+          <div class="manifesto__image-tag">Новосибирск · 1994</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ TIMELINE / BIO ══════════ -->
+    <section class="bio-section" id="bio">
+      <div class="bio-section__header container">
+        <div class="section-label reveal-up">02 / Биография</div>
+        <h2 class="section-heading reveal-up" style="--d:.2s">Жизненный путь</h2>
+      </div>
+
+      <div class="timeline-wrap container">
+
+        <!-- 1954 - Детство -->
+        <div class="tl-item reveal-tl">
+          <div class="tl-item__year">
+            <span>1954–1971</span>
+            <div class="tl-item__line"></div>
+          </div>
+          <div class="tl-item__card glass-card">
+            <div class="tl-item__tag">Детство и юность</div>
+            <h3>Ташкент — Кочкор-Ата</h3>
+            <p>28 февраля 1954 года в городе Ташкенте в семье Льва Николаевича и Нины Семёновны Васильевых родился будущий музыкант Николай Львович Васильев. Первые годы жизни он провёл в Ташкенте, а в 1958 году семья переехала в Киргизию. Детство и юность музыканта прошли в посёлке Кочкор-Ата, где он окончил среднюю школу №15.</p>
+            <div class="tl-item__geo">🌍 Ташкент · Киргизия · Кочкор-Ата</div>
+          </div>
+        </div>
+
+        <!-- 1972 - Становление -->
+        <div class="tl-item tl-item--right reveal-tl" style="--d:.15s">
+          <div class="tl-item__year">
+            <span>1972–1983</span>
+            <div class="tl-item__line"></div>
+          </div>
+          <div class="tl-item__card glass-card">
+            <div class="tl-item__tag">Становление</div>
+            <h3>Начало творческого пути</h3>
+            <p>Серьёзное увлечение музыкой началось во время службы в пограничных войсках 1972–1974 годов.</p>
+            <div class="tl-item__steps">
+              <div class="tl-step">
+                <div class="tl-step__label">Поиск себя</div>
+                <p>После демобилизации в 1975 году Николай Львович приехал в Новосибирск, где поступил в музыкальное училище на народное отделение.</p>
+              </div>
+              <div class="tl-step">
+                <div class="tl-step__label">Первые выступления</div>
+                <p>Параллельно с учёбой активно участвовал в выступлениях вокально-инструментальных ансамблей и эстрадных коллективов города.</p>
+              </div>
+              <div class="tl-step">
+                <div class="tl-step__label">Участие в фестивалях</div>
+                <p>В 1983 году музыкант вернулся в Среднюю Азию, где продолжил концертную деятельность, выступая как в ВИА, так и в национальных музыкальных коллективах. Этот период обогатил творческий опыт и расширил музыкальный кругозор.</p>
+              </div>
+            </div>
+            <div class="tl-item__geo">🎶 Новосибирск · Средняя Азия</div>
+          </div>
+        </div>
+
+        <!-- 1988 - Крым -->
+        <div class="tl-item reveal-tl" style="--d:.3s">
+          <div class="tl-item__year">
+            <span>1988–1993</span>
+            <div class="tl-item__line"></div>
+          </div>
+          <div class="tl-item__card glass-card tl-item__card--image">
+            <div class="tl-item__tag tl-item__tag--crimea">Крымский период</div>
+            <h3>Бахчисарай и море</h3>
+            <p>1988 год стал новым этапом в жизни музыканта — вместе с семьёй, в которой уже подросли трое сыновей, он переехал в Крым. Здесь Николай Львович активно занялся творчеством, создав совместно с друзьями Сергеем Ананьевым и В.Д. Белобородовым музыкальный альбом, посвящённый Бахчисараю.</p>
+            <div class="tl-item__img-wrap">
+              <img src="crimea.png" alt="Крым" loading="lazy">
+            </div>
+            <div class="tl-item__geo">🌊 Крым · Бахчисарай</div>
+          </div>
+        </div>
+
+        <!-- 1994 - Новосибирск -->
+        <div class="tl-item tl-item--right reveal-tl" style="--d:.45s">
+          <div class="tl-item__year">
+            <span>С 1994</span>
+            <div class="tl-item__line"></div>
+          </div>
+          <div class="tl-item__card glass-card tl-item__card--image">
+            <div class="tl-item__tag">Сибирский цикл</div>
+            <h3>Возвращение в Новосибирск</h3>
+            <p>1994 год ознаменовался возвращением музыканта в Новосибирск. К счастью, его здесь помнили и ценили, что позволило ему с новыми силами погрузиться в творческую деятельность. Особое место в его творчестве заняли песни о любимом городе и Сибири.</p>
+            <div class="tl-item__img-wrap">
+              <img src="novosibirsk.png" alt="Новосибирск" loading="lazy">
+            </div>
+            <div class="tl-item__geo">❄️ Новосибирск · Сибирь</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ PLAYER ══════════ -->
+    <section class="player-section" id="music">
+      <!-- Orange triangle accent (top right, like reference) -->
+      <div class="player-triangle" aria-hidden="true"></div>
+      <div class="player-section__bg">
+        <div class="player-section__parallax" id="player-parallax" style="background-image:url('novosibirsk.png')"></div>
+        <div class="player-section__overlay"></div>
+        <div class="player-section__noise"></div>
+      </div>
+
+      <div class="container player-wrap">
+        <div class="section-label reveal-up" style="color:rgba(255,255,255,.5)">02 / Дискография</div>
+        <h2 class="section-heading reveal-up" style="--d:.2s; color:#fff">Слушать</h2>
+
+        <div class="player-ui reveal-up" style="--d:.1s">
+          <!-- Left: Now Playing -->
+          <div class="now-playing" id="now-playing-panel">
+            <div class="now-playing__art" id="np-art">
+              <div class="now-playing__art-placeholder" id="np-placeholder">
+                <div class="waveform large" id="main-waveform" aria-hidden="true"></div>
+              </div>
+              <img id="np-art-img" src="" alt="" style="display:none; position:absolute; inset:0; width:100%; height:100%;">
+            </div>
+            <div class="now-playing__bottom">
+              <div class="now-playing__track-info">
+                <h3 id="np-title">Выберите трек</h3>
+                <p id="np-meta">Дискография · Васильев Николай</p>
+              </div>
+              <div class="now-playing__controls">
+                <button id="np-toggle" class="btn btn--glow btn--circle magnetic" aria-label="Play">
+                  <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                </button>
+                <div class="waveform large" id="bottom-waveform" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Playlist -->
+          <div class="playlist" id="playlist">
+            <!-- 30 tracks injected by main.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ GALLERY (horizontal scroll) ══════════ -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-label reveal-up">03 / Галерея</div>
+        <div class="gallery-section__header">
+          <h2 class="section-heading reveal-up" style="--d:.2s">Фотографии</h2>
+          <p class="gallery-hint reveal-up" style="--d:.3s">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            перетащите
+          </p>
+        </div>
+      </div>
+
+      <div class="h-gallery" id="h-gallery">
+        <div class="h-gallery__track" id="h-gallery-track">
+          <div class="h-gallery__item">
+            <img src="musician.png" alt="Николай Васильев" loading="lazy">
+            <div class="h-gallery__caption">Николай Васильев · Портрет</div>
+          </div>
+          <div class="h-gallery__item h-gallery__item--wide">
+            <img src="novosibirsk.png" alt="Новосибирск" loading="lazy">
+            <div class="h-gallery__caption">Новосибирск · Любимый город</div>
+          </div>
+          <div class="h-gallery__item">
+            <img src="gallery1.png" alt="Выступление у рояля" loading="lazy">
+            <div class="h-gallery__caption">Выступление · У рояля</div>
+          </div>
+          <div class="h-gallery__item h-gallery__item--wide">
+            <img src="crimea.png" alt="Крым — Бахчисарай" loading="lazy">
+            <div class="h-gallery__caption">Крым · Бахчисарайский период</div>
+          </div>
+          <div class="h-gallery__item">
+            <img src="hero_bg.png" alt="Студия" loading="lazy">
+            <div class="h-gallery__caption">Творческая мастерская</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ RECOGNITION ══════════ -->
+    <section class="recognition-section" id="festivals">
+      <div class="container recognition-inner">
+        <div class="recognition-text">
+          <div class="section-label reveal-up">Признание и творчество</div>
+          <h2 class="section-heading reveal-up" style="--d:.15s">Достижения</h2>
+
+          <div class="achievement-cards">
+            <div class="achievement-card glass-card reveal-up" style="--d:.1s">
+              <div class="achievement-card__icon">🏆</div>
+              <div>
+                <strong>Фестивали шансона и конкурсы</strong>
+                <p>Активное участие в различных музыкальных фестивалях и конкурсах, включая фестивали шансона и межрегиональные песенные конкурсы.</p>
+              </div>
+            </div>
+            <div class="achievement-card glass-card reveal-up" style="--d:.2s">
+              <div class="achievement-card__icon">🎖</div>
+              <div>
+                <strong>Фонд В.С. Высоцкого</strong>
+                <p>Творчество музыканта получило поддержку фонда по увековечиванию памяти В.С. Высоцкого. Выражение благодарности председателю фонда за оказанную поддержку.</p>
+              </div>
+            </div>
+            <div class="achievement-card glass-card reveal-up" style="--d:.3s">
+              <div class="achievement-card__icon">🎵</div>
+              <div>
+                <strong>Репертуар известных исполнителей</strong>
+                <p>Его композиции вошли в репертуар известных исполнителей, в том числе вокально-инструментальных ансамблей и национальных музыкальных коллективов.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="recognition-quote reveal-up" style="--d:.4s">
+          <blockquote>
+            «Творчество Николая Львовича Васильева неразрывно связано с его родным городом и друзьями. Множество песен он посвятил Новосибирску и его окрестностям, отразив в них свою любовь к малой родине и признательность близким людям. Его музыкальная карьера — это яркий пример того, как талант и упорный труд могут привести к признанию и успеху в любимом деле.»
+          </blockquote>
+          <cite>— из биографии музыканта</cite>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© <span id="year"></span> Васильев Николай Львович</p>
+      <p class="footer__tagline">Путь музыканта</p>
+      <p class="footer__copy">Все права защищены</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
